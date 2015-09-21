@@ -4740,3 +4740,293 @@ Processing by ProjectsController#show as HTML
   Rendered layouts/_sidebar.html.erb (0.5ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 251ms (Views: 247.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-08 17:38:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-07-08 21:38:03.827139')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1016ms (Views: 1001.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2015-07-08 17:38:04 -0400
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-07-08 17:38:09 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/1/registrations/new" for 127.0.0.1 at 2015-07-08 17:38:17 -0400
+Processing by RegistrationsController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_errors.html.erb (2.3ms)
+  Rendered registrations/new.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 72.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/projects/1/registrations" for 127.0.0.1 at 2015-07-08 17:38:36 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MaVmuU3JNIwvcB5EnRYYzk9RVL7fXCxTZZIlw6I0kyM=", "registration"=>{"name"=>"jay", "email"=>"parrish@gmail.com", "how_heard"=>""}, "commit"=>"Create Registration", "project_id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered registrations/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:37 -0400
+
+
+Started POST "/projects/1/registrations" for 127.0.0.1 at 2015-07-08 17:38:49 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MaVmuU3JNIwvcB5EnRYYzk9RVL7fXCxTZZIlw6I0kyM=", "registration"=>{"name"=>"jay", "email"=>"parrish@gmail.com", "how_heard"=>"Blog Post"}, "commit"=>"Create Registration", "project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "registrations" ("created_at", "email", "how_heard", "name", "project_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-07-08 21:38:49.077625"], ["email", "parrish@gmail.com"], ["how_heard", "Blog Post"], ["name", "jay"], ["project_id", 1], ["updated_at", "2015-07-08 21:38:49.077625"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/1/registrations
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/1/registrations" for 127.0.0.1 at 2015-07-08 17:38:49 -0400
+Processing by RegistrationsController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1mSELECT "registrations".* FROM "registrations"  WHERE "registrations"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered registrations/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-08 17:38:49 -0400
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-07-08 17:38:52 -0400
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-07-08 21:38:52.796624')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-07-08 17:38:54 -0400
+Processing by ProjectsController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered projects/_form.html.erb (6.5ms)
+  Rendered projects/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-07-08 17:39:22 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-07-08 21:39:22.350022')  ORDER BY pledging_ends_on asc[0m
+  Rendered projects/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-07-08 21:40:35.780688')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 55.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-07-08 17:40:35 -0400
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-07-08 17:40:38 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-07-08 21:40:38.875165')  ORDER BY pledging_ends_on asc[0m
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 61.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-07-08 17:40:40 -0400
+Processing by ProjectsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered projects/_form.html.erb (4.4ms)
+  Rendered projects/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-07-08 17:40:45 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-07-08 17:40:51 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered projects/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-07-08 17:40:53 -0400
+Processing by ProjectsController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered projects/_form.html.erb (4.4ms)
+  Rendered projects/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-07-08 17:40:54 -0400
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"  WHERE (pledging_ends_on >= '2015-07-08 21:40:54.779418')  ORDER BY pledging_ends_on asc
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.2ms)
